@@ -1,0 +1,15 @@
+<mat-form-field class="search-bar">
+  <input matInput placeholder="Search..." [formControl]="searchControl" (keyup)="searchResults(searchControl)"/>
+</mat-form-field>
+
+<div class="results">
+  <!-- Example result format -->
+  <mat-card *ngFor="let feed of filteredResults" class="result">
+    <img *ngIf="feed.thumbnail" mat-card-md-image [src]="feed.thumbnail" />
+    <div>
+      <mat-card-title>{{ feed.title }}</mat-card-title>
+      <mat-card-subtitle>{{ feed.pubDate }}</mat-card-subtitle>
+      <mat-card-content>{{ feed.content }}</mat-card-content>
+    </div>
+  </mat-card>
+</div>

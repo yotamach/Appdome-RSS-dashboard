@@ -1,0 +1,25 @@
+:host {
+  padding: 10px 40px 0;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .results {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 10px;
+
+    .result {
+      display: flex;
+      margin-bottom: 25px;
+
+      img {
+        margin-right: 20px;
+      }
+    }
+  }
+}
